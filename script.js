@@ -22,7 +22,7 @@ container.className = 'container';
 container.style.width =  `${containerWidth+colGaps}px`;
 container.style.height = `${containerHeight+rowGaps}px`;
 
-let noOfSquares = 0;
+let noOfSquares = 1;
 while (noOfSquares < totalSquares) {
   const squareCopy = square.cloneNode(true);
   container.appendChild(squareCopy);
