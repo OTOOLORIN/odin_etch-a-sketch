@@ -7,3 +7,6 @@ const noOfCols = 16;
 square.setAttribute('class', 'square');
 
 container.appendChild(square);
+
+const squareWidth = square.offsetWidth;
+const squareHeight = square.offsetHeight;
