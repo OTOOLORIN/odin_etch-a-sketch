@@ -13,5 +13,7 @@ const squareHeight = square.offsetHeight;
 const containerWidth = squareWidth * noOfCols
 const containerHeight = squareHeight * noOfRows;
 
+container.className = 'container';
+
 container.style.width =  `${containerWidth}px`;
 container.style.height = `${containerHeight}px`;
