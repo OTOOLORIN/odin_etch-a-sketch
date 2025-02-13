@@ -17,4 +17,4 @@ const containerHeight = squareHeight * noOfRows;
 container.className = 'container';
 
 container.style.width =  `${containerWidth}px`;
-container.style.height = `${containerHeight}px`
+container.style.height = `${containerHeight}px`;
