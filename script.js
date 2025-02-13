@@ -10,3 +10,8 @@ container.appendChild(square);
 
 const squareWidth = square.offsetWidth;
 const squareHeight = square.offsetHeight;
+const containerWidth = squareWidth * noOfCols
+const containerHeight = squareHeight * noOfRows;
+
+container.style.width =  `${containerWidth}px`;
+container.style.height = `${containerHeight}px`;
