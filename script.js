@@ -3,6 +3,9 @@ const container = document.querySelector('.container');
 const square = document.createElement('div');
 const noOfRows = 16;
 const noOfCols = 16;
+const rowGaps = 5 * noOfRows;
+const colGaps = 10 * noOfCols;
+
 const totalSquares = noOfRows * noOfCols;
 
 square.setAttribute('class', 'square');
@@ -16,8 +19,8 @@ const containerHeight = squareHeight * noOfRows;
 
 container.className = 'container';
 
-container.style.width =  `${containerWidth}px`;
-container.style.height = `${containerHeight}px`;
+container.style.width =  `${containerWidth+colGaps}px`;
+container.style.height = `${containerHeight+rowGaps}px`;
 
 let noOfSquares = 0;
 while (noOfSquares < totalSquares) {
