@@ -18,3 +18,10 @@ container.className = 'container';
 
 container.style.width =  `${containerWidth}px`;
 container.style.height = `${containerHeight}px`;
+
+let noOfSquares = 0;
+while (noOfSquares < totalSquares) {
+  const squareCopy = square.cloneNode(true);
+  container.appendChild(squareCopy);
+  noOfSquares++;
+}
