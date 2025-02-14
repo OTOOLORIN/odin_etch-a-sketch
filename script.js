@@ -5,10 +5,15 @@ const totalSqrs = 16**2;
 function displayGrid(totalSqrs) {
 
   const grid = document.querySelector('.container');
-  const square = document.createElement('div');
 
   const gridWidth = grid.offsetWidth;
   const squareSize = gridWidth / totalSqrs;
 
+  let noOfSquares = 0;
+  while (noOfSquares < totalSqrs) {
+    const square = document.createElement('div');
+    grid.appendChild(square);
+    noOfSquares++;
+  }
   console.log(squareSize); 
 }
