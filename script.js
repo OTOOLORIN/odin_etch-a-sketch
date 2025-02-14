@@ -12,6 +12,7 @@ function displayGrid(totalSqrs) {
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
     const square = document.createElement('div');
+    square.className = 'square';
     grid.appendChild(square);
     noOfSquares++;
   }
