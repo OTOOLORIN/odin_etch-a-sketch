@@ -21,7 +21,6 @@ function displayGrid(noOfSqrs) {
     grid.appendChild(sqrCopy);
     noOfSquares++;
   }
-  console.log(document.querySelectorAll('.container > div').length);
 }
 
 function toggleHover(evt) {
