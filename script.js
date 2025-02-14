@@ -1,9 +1,9 @@
 const noOfSqrs = 40;
+const grid = document.querySelector('.container');
 
 function displayGrid(noOfSqrs) {
 
   const totalSqrs = noOfSqrs**2;
-  const grid = document.querySelector('.container');
 
   const gridWidth = grid.offsetWidth;
   const squareSize = gridWidth / noOfSqrs;
