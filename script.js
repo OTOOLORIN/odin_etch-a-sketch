@@ -24,8 +24,6 @@ function displayGrid(noOfSqrs) {
   console.log(document.querySelectorAll('.container > div').length);
 }
 
-displayGrid(noOfSqrs);
-
 function toggleHover(evt) {
   if (evt.target.className === 'container') {
     return;
@@ -40,4 +38,5 @@ function setHoverEffect() {
   grid.addEventListener('mouseout', toggleHover);
 }
 
+displayGrid(noOfSqrs);
 setHoverEffect();
