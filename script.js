@@ -1,5 +1,5 @@
-const noOfSqrs = 40;
-const grid = document.querySelector('.container');
+const noOfSqrs = 16;
+const grid = document.querySelector('.container')
 
 function displayGrid(noOfSqrs) {
 
@@ -25,3 +25,19 @@ function displayGrid(noOfSqrs) {
 }
 
 displayGrid(noOfSqrs);
+
+function toggleHover(evt) {
+  if (evt.target.className === 'container') {
+    return;
+  }
+  const gridSquare = evt.target;
+  gridSquare.classList.toggle('hover-in');
+}
+
+function setHoverEffect() {
+  grid.addEventListener('mouseover', toggleHover);
+
+  grid.addEventListener('mouseout', toggleHover);
+}
+
+setHoverEffect();
