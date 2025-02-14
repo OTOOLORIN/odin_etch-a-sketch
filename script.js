@@ -6,4 +6,8 @@ function displayGrid(totalSqrs) {
 
   const grid = document.querySelector('.container');
   const square = document.createElement('div');
+
+  const gridWidth = grid.offsetWidth;
+  const squareWidth = gridWidth / totalSqrs;
+  console.log(squareWidth); 
 }
