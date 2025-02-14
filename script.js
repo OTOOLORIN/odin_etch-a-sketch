@@ -3,7 +3,6 @@ const noOfSqrs = 100;
 const totalSqrs = 100**2;
 
 function displayGrid(totalSqrs) {
-  console.time('one');
 
   const grid = document.querySelector('.container');
 
@@ -23,5 +22,4 @@ function displayGrid(totalSqrs) {
     noOfSquares++;
   }
   console.log(squareSize);
-  console.timeEnd('one')
 }
