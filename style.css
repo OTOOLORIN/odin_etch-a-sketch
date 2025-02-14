@@ -20,4 +20,5 @@
 
 .hover-in {
   background-color: aquamarine;
+  cursor: none;
 }
