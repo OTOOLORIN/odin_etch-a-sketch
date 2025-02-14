@@ -1,13 +1,12 @@
-const noOfSqrs = 100;
+const noOfSqrs = 16;
 
-const totalSqrs = noOfSqrs**2;
+function displayGrid(noOfSqrs) {
 
-function displayGrid(totalSqrs) {
-
+  const totalSqrs = noOfSqrs**2;
   const grid = document.querySelector('.container');
 
   const gridWidth = grid.offsetWidth;
-  const squareSize = gridWidth / totalSqrs**0.5;
+  const squareSize = gridWidth / noOfSqrs;
 
   const square = document.createElement('div');
   square.className = 'square';
