@@ -1,4 +1,4 @@
-const noOfSqrs = 4;
+const noOfSqrs = 40;
 
 function displayGrid(noOfSqrs) {
 
@@ -13,7 +13,7 @@ function displayGrid(noOfSqrs) {
   const style = document.createElement('style');
   style.innerHTML = `.square {width: ${squareSize}px; height: ${squareSize}px;}`;
   document.head.appendChild(style);
-  
+
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
 
@@ -21,5 +21,7 @@ function displayGrid(noOfSqrs) {
     grid.appendChild(sqrCopy);
     noOfSquares++;
   }
-  console.log(squareSize);
+  console.log(document.querySelectorAll('.container > div').length);
 }
+
+displayGrid(noOfSqrs);
