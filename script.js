@@ -1,4 +1,4 @@
-const noOfSqrs = 16;
+const noOfSqrs = 4;
 
 function displayGrid(noOfSqrs) {
 
@@ -10,9 +10,10 @@ function displayGrid(noOfSqrs) {
 
   const square = document.createElement('div');
   square.className = 'square';
-  square.style.setProperty('--square-width', `${squareSize}px`);
-  square.style.setProperty('--square-height', `${squareSize}px`);
-
+  const style = document.createElement('style');
+  style.innerHTML = `.square {width: ${squareSize}px; height: ${squareSize}px;}`;
+  document.head.appendChild(style);
+  
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
 

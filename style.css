@@ -13,7 +13,5 @@
 }
 
 .square {
-  width: var(--square-width);
-  height: var(--square-height);
   border: 0.0002px solid #444;
 }
