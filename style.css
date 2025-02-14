@@ -22,3 +22,13 @@
   background-color: aquamarine;
   cursor: none;
 }
+
+.new-grid {
+  min-width: 250px;
+  margin: auto;
+  font-size: 20px;
+  background-color: #464E47;
+  color: #F1FFFA;
+  padding: 20px 25px;
+  border-radius: 10px;
+}
