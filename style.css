@@ -8,4 +8,11 @@
   max-width: 1000px;
   background: #eee;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: var(--square-width);
+  height: var(--square-height);
+  border: 0.2px solid black;
 }
