@@ -1,22 +1,27 @@
-const noOfSqrs = 16;
+const noOfSqrs = 100;
 
-const totalSqrs = 16**2;
+const totalSqrs = 100**2;
 
 function displayGrid(totalSqrs) {
+  console.time('one');
 
   const grid = document.querySelector('.container');
 
   const gridWidth = grid.offsetWidth;
   const squareSize = gridWidth / totalSqrs**0.5;
 
+  const square = document.createElement('div');
+  square.className = 'square';
+  square.style.setProperty('--square-width', `${squareSize}px`);
+  square.style.setProperty('--square-height', `${squareSize}px`);
+
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
-    const square = document.createElement('div');
-    square.className = 'square';
-    square.style.setProperty('--square-width', `${squareSize}px`);
-    square.style.setProperty('--square-height', `${squareSize}px`)
-    grid.appendChild(square);
+
+    const sqrCopy = square.cloneNode(true);
+    grid.appendChild(sqrCopy);
     noOfSquares++;
   }
   console.log(squareSize);
+  console.timeEnd('one')
 }
