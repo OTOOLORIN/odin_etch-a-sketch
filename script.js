@@ -1,16 +1,18 @@
 const noOfSqrs = 16;
-const grid = document.querySelector('.container')
+const body = document.querySelector('body');
+let grid = document.querySelector('.container');
+const newGridBtn = document.querySelector('.new-grid');
+const style = document.createElement('style');
 
-function displayGrid(noOfSqrs) {
+function displayGrid(noOfSqrs, myGrid=grid) {
 
   const totalSqrs = noOfSqrs**2;
 
-  const gridWidth = grid.offsetWidth;
+  const gridWidth = myGrid.offsetWidth;
   const squareSize = gridWidth / noOfSqrs;
 
   const square = document.createElement('div');
   square.className = 'square';
-  const style = document.createElement('style');
   style.innerHTML = `.square {width: ${squareSize}px; height: ${squareSize}px;}`;
   document.head.appendChild(style);
 
@@ -18,7 +20,7 @@ function displayGrid(noOfSqrs) {
   while (noOfSquares < totalSqrs) {
 
     const sqrCopy = square.cloneNode(true);
-    grid.appendChild(sqrCopy);
+    myGrid.appendChild(sqrCopy);
     noOfSquares++;
   }
 }
@@ -37,5 +39,30 @@ function setHoverEffect() {
   grid.addEventListener('mouseout', toggleHover);
 }
 
+function promptUser() {
+  let validityOfSqrs;
+  let sqrsPerSide;
+  do {
+  sqrsPerSide = prompt(`How many squares do you want per side of the new grid?
+(enter a number from 1 - 100 inclusive)`, 16);
+  if (sqrsPerSide === null) {
+    return;
+  }
+  sqrsPerSide = +sqrsPerSide;
+  validityOfSqrs = (sqrsPerSide < 1) || (Number.isNaN(sqrsPerSide)) || (sqrsPerSide > 100);
+}
+  while(validityOfSqrs);
+  const newGrid = document.createElement('div');
+  document.head.removeChild(style);
+  newGrid.classList.add('container');
+  body.removeChild(grid);
+  body.appendChild(newGrid);
+  displayGrid(sqrsPerSide, newGrid);
+  grid = newGrid;
+  setHoverEffect();
+}
+
 displayGrid(noOfSqrs);
 setHoverEffect();
+
+newGridBtn.addEventListener('click', promptUser);
