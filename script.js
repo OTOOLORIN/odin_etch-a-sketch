@@ -1,6 +1,6 @@
 const noOfSqrs = 100;
 
-const totalSqrs = 100**2;
+const totalSqrs = noOfSqrs**2;
 
 function displayGrid(totalSqrs) {
 
