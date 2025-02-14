@@ -7,7 +7,7 @@ function displayGrid(totalSqrs) {
   const grid = document.querySelector('.container');
 
   const gridWidth = grid.offsetWidth;
-  const squareSize = gridWidth / totalSqrs;
+  const squareSize = gridWidth / totalSqrs**0.5;
 
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
@@ -18,5 +18,5 @@ function displayGrid(totalSqrs) {
     grid.appendChild(square);
     noOfSquares++;
   }
-  console.log(squareSize); 
+  console.log(squareSize);
 }
