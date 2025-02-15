@@ -44,7 +44,7 @@ function promptUser() {
   let sqrsPerSide;
   do {
   sqrsPerSide = prompt(`How many squares do you want per side of the new grid?
-(enter a number from 1 - 100 inclusive)`, 16);
+(enter an integer from 1 - 100 inclusive)`, 16);
   if (sqrsPerSide === null) {
     return;
   }
