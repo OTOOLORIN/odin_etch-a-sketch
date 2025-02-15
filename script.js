@@ -49,7 +49,8 @@ function promptUser() {
     return;
   }
   sqrsPerSide = +sqrsPerSide;
-  validityOfSqrs = (sqrsPerSide < 1) || (Number.isNaN(sqrsPerSide)) || (sqrsPerSide > 100);
+  validityOfSqrs = (sqrsPerSide < 1) || (Number.isNaN(sqrsPerSide)) || (sqrsPerSide > 100) ||
+                    (!Number.isInteger(sqrsPerSide));
 }
   while(validityOfSqrs);
   const newGrid = document.createElement('div');
