@@ -65,7 +65,7 @@ function generateNewGrid() {
 
 function generateRandomColor() {
   const colorNumber = Math.floor(Math.random()*255) + 1;
-  console.log(colorNumber);
+  return colorNumber;
 } 
 
 displayGrid(noOfSqrs);
