@@ -63,6 +63,11 @@ function generateNewGrid() {
   setHoverEffect();
 }
 
+function generateRandomColor() {
+  const colorNumber = Math.floor(Math.random()*255) + 1;
+  console.log(colorNumber);
+} 
+
 displayGrid(noOfSqrs);
 setHoverEffect();
 
