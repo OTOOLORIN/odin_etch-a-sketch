@@ -39,7 +39,7 @@ function setHoverEffect() {
   grid.addEventListener('mouseout', toggleHover);
 }
 
-function promptUser() {
+function generateNewGrid() {
   let validityOfSqrs;
   let sqrsPerSide;
   do {
@@ -66,4 +66,4 @@ function promptUser() {
 displayGrid(noOfSqrs);
 setHoverEffect();
 
-newGridBtn.addEventListener('click', promptUser);
+newGridBtn.addEventListener('click', generateNewGrid);
