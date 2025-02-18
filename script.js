@@ -92,21 +92,3 @@ colorBtn.addEventListener('dblclick', () => {
     square.classList.toggle('hover-in');
   })
 })
-
-// colorBtn.addEventListener('dblclick', () => {
-//   grid.addEventListener('mouseover', (ent) => {
-//     ent.target.classList.toggle('randomize');
-//     let currentColor = getComputedStyle(root).getPropertyValue('--random-color');
-//     const colorCode = generateRandomColor;
-//     currentColor = `rgb(${colorCode()}, ${colorCode()}, ${colorCode()})`;
-//     root.style.setProperty('--random-color', currentColor);
-//     console.log(currentColor);
-
-//     ent.target.classList.toggle('hover-in');
-//   });
-
-//   grid.addEventListener('mouseout', (ent) => {
-//     ent.target.classList.toggle('randomize');
-//     ent.target.classList.toggle('hover-in');
-//   })
-// })
