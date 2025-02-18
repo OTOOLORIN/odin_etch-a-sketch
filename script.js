@@ -7,7 +7,6 @@ const style = document.createElement('style');
 const root = document.documentElement;
 
 function displayGrid(noOfSqrs, myGrid=grid) {
-
   const totalSqrs = noOfSqrs**2;
 
   const gridWidth = myGrid.offsetWidth;
