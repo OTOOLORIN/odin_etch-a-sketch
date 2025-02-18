@@ -81,7 +81,7 @@ colorBtn.addEventListener('dblclick', () => {
     let colorCode = generateRandomColor;
     
     currentColor = `rgb(${colorCode()}, ${colorCode()}, ${colorCode()})`;
-    console.log(currentColor);
+    root.style.setProperty('--random-color', currentColor);
     square.classList.toggle('randomize');
     square.classList.toggle('hover-in');
   })
