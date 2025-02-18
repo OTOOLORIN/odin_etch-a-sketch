@@ -4,6 +4,7 @@ let grid = document.querySelector('.container');
 const newGridBtn = document.querySelector('.new-grid');
 const colorBtn = document.querySelector('.random-colors');
 const style = document.createElement('style');
+const root = document.documentElement;
 
 function displayGrid(noOfSqrs, myGrid=grid) {
 
