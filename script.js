@@ -3,7 +3,6 @@ const body = document.querySelector('body');
 let grid = document.querySelector('.container');
 const newGridBtn = document.querySelector('.new-grid');
 const colorBtn = document.querySelector('.random-colors');
-const style = document.createElement('style');
 const root = document.documentElement;
 
 function displayGrid(noOfSqrs, myGrid=grid) {
@@ -14,8 +13,9 @@ function displayGrid(noOfSqrs, myGrid=grid) {
 
   const square = document.createElement('div');
   square.className = 'square';
-  style.innerHTML = `.square {width: ${squareSize}px; height: ${squareSize}px;}`;
-  document.head.appendChild(style);
+  root.style.setProperty('--width', `${squareSize}px`);
+  root.style.setProperty('--height', `${squareSize}px`);
+ 
 
   let noOfSquares = 0;
   while (noOfSquares < totalSqrs) {
