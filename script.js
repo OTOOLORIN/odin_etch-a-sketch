@@ -77,6 +77,7 @@ newGridBtn.addEventListener('click', generateNewGrid);
 colorBtn.addEventListener('dblclick', () => {
   grid.addEventListener('mouseover', (evt) => {
     const square = evt.target;
+    let currentColor = getComputedStyle(root).getPropertyValue('--random-color');
     square.classList.toggle('hover-in');
   })
 
