@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --random-color: papayawhip;
+}
+
 body {
   text-align: center;
   padding-top: 20px;
@@ -58,4 +62,8 @@ body {
   gap: 100px;
   display: flex;
 
+}
+
+.randomize {
+  background-color: var(--random-color);
 }
