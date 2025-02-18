@@ -78,6 +78,10 @@ colorBtn.addEventListener('dblclick', () => {
   grid.addEventListener('mouseover', (evt) => {
     const square = evt.target;
     let currentColor = getComputedStyle(root).getPropertyValue('--random-color');
+    let colorCode = generateRandomColor;
+    
+    currentColor = `rgb(${colorCode()}, ${colorCode()}, ${colorCode()})`;
+    console.log(currentColor);
     square.classList.toggle('randomize');
     square.classList.toggle('hover-in');
   })
