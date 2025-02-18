@@ -7,6 +7,8 @@
 
 :root {
   --random-color: papayawhip;
+  --width: 0px;
+  --height: 0px;
 }
 
 body {
@@ -25,6 +27,8 @@ body {
 }
 
 .square {
+  width: var(--width);
+  height: var(--height);
   border: 0.0002px solid #444;
 }
 
