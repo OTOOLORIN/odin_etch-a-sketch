@@ -62,6 +62,9 @@ function generateNewGrid() {
   body.appendChild(newGrid);
   displayGrid(sqrsPerSide, newGrid);
   grid = newGrid;
+  
+  // remove random color activation sign
+  colorBtn.classList.remove('border');
   setHoverEffect();
 }
 
@@ -76,6 +79,8 @@ setHoverEffect();
 newGridBtn.addEventListener('click', generateNewGrid);
 
 colorBtn.addEventListener('dblclick', () => {
+  colorBtn.classList.toggle('border');
+
   grid.addEventListener('mouseover', (evt) => {
     const square = evt.target;
     let currentColor = getComputedStyle(root).getPropertyValue('--random-color');

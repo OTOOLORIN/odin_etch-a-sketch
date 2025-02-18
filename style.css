@@ -43,7 +43,13 @@ body {
   padding: 20px 25px;
 }
 
-.new-grid:hover {
+.random-colors span {
+  color: papayawhip;
+  font-size: 18px;
+  display: block;
+}
+.new-grid:hover,
+.border {
   border-radius: 20px;
   cursor: pointer;
   font-size: 22px;
