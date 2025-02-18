@@ -2,7 +2,9 @@ const noOfSqrs = 16;
 const body = document.querySelector('body');
 let grid = document.querySelector('.container');
 const newGridBtn = document.querySelector('.new-grid');
+const colorBtn = document.querySelector('.random-colors');
 const style = document.createElement('style');
+const root = document.querySelector(':root');
 
 function displayGrid(noOfSqrs, myGrid=grid) {
 
@@ -72,3 +74,33 @@ displayGrid(noOfSqrs);
 setHoverEffect();
 
 newGridBtn.addEventListener('click', generateNewGrid);
+
+colorBtn.addEventListener('dblclick', () => {
+  grid.addEventListener('mouseover', (evt) => {
+    const square = evt.target;
+    square.classList.toggle('hover-in');
+  })
+
+  grid.addEventListener('mouseout', (evt) => {
+    const square = evt.target;
+    square.classList.toggle('hover-in');
+  })
+})
+
+// colorBtn.addEventListener('dblclick', () => {
+//   grid.addEventListener('mouseover', (ent) => {
+//     ent.target.classList.toggle('randomize');
+//     let currentColor = getComputedStyle(root).getPropertyValue('--random-color');
+//     const colorCode = generateRandomColor;
+//     currentColor = `rgb(${colorCode()}, ${colorCode()}, ${colorCode()})`;
+//     root.style.setProperty('--random-color', currentColor);
+//     console.log(currentColor);
+
+//     ent.target.classList.toggle('hover-in');
+//   });
+
+//   grid.addEventListener('mouseout', (ent) => {
+//     ent.target.classList.toggle('randomize');
+//     ent.target.classList.toggle('hover-in');
+//   })
+// })
